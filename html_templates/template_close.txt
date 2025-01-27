@@ -1,0 +1,68 @@
+
+
+
+	// Add a basic light to illuminate the pyramid
+	const light = new THREE.PointLight(0xffffff, 1, 100);
+	light.position.set(10, 10, 10); // Position the light above and to the right
+	scene.add(light);
+
+	// Set initial camera position
+	camera.position.z = 100;
+
+	// Handle window resizing
+	window.addEventListener('resize', () => {
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+	});
+	frame_interval=60
+	const animationParams = {
+	speed:2.5
+	};
+	const gui = new dat.GUI();
+	gui.add(animationParams, 'speed', 1, 10).name('Speed').onChange((value) => {
+		frame_interval = 150/value;
+	});
+	let lastSwitchTime = Date.now();
+	// Animation loop
+	function animate() {
+		requestAnimationFrame(animate);
+		controls.update(); // Update camera controls
+
+		const currentTime = Date.now();
+
+        // Switch point clouds after the interval
+    	if (currentTime - lastSwitchTime > frame_interval) {
+
+		previous_ind=global_ind
+		global_ind += 1;
+		
+		global_ind=global_ind%numInstances
+		bases_all[global_ind].visible=true
+		//edges_all[global_ind].visible=true
+		edges_all[global_ind].children[0].material.color = new THREE.Color( 0xff0000  );
+		edges_all[global_ind].children[0].material.transparent=true;
+		edges_all[global_ind].children[0].material.opacity= 1.0;
+		edges_all[global_ind].children[0].material.needsUpdate = true;
+
+
+		bases_all[previous_ind].visible=false
+		//edges_all[previous_ind].visible=false
+		edges_all[previous_ind].children[0].material.color = new THREE.Color( 0x535353);
+		edges_all[previous_ind].children[0].material.transparent=true;
+		edges_all[previous_ind].children[0].material.opacity= 0.3;
+		edges_all[previous_ind].children[0].material.needsUpdate = true;
+		point_clouds[global_ind].visible=true;
+		point_clouds[previous_ind].visible=false;
+		
+		lastSwitchTime = currentTime; 
+		}
+
+		renderer.render(scene, camera);
+	}
+
+	animate();
+</script>
+
+</body>
+</html>
