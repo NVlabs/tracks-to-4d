@@ -513,7 +513,7 @@ def get_losses(projections_,tracks,tracks_vis,projections_static_,NR,camera_num,
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--dataset_folder_validation', default="cop3d_rgbd_test/our_data_format_4_validation_rgbd", help="Evaluation folder")
+    parser.add_argument('--dataset_folder_validation', default="data/pet_test_set/our_data_format_4_validation_rgbd", help="Evaluation folder")
     parser.add_argument('--input_checkpoint_file', default="pretrained_checkpoints/pets_checkpoint.pt", help="Checkpoint file")
     parser.add_argument('--input_config_file', default="pretrained_checkpoints/conf.json", help="Checkpoint config file")
     

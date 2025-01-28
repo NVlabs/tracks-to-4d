@@ -13,9 +13,9 @@ def main():
 
     parser.add_argument('--sparsity_dynamic_coeff', type=float, default=0.001, help="Sparsity loss coefficient")
     parser.add_argument('--reprojection_dynamic_coeff', type=float, default=50.0, help="Reprojection error coefficient")
-    parser.add_argument('--dataset_folder', default="cop3d_rgbd_test/our_data_format_4_validation_rgbd", help="Training data path")
+    parser.add_argument('--dataset_folder', default="data/pet_test_set/our_data_format_4_validation_rgbd", help="Training data path")
     
-    parser.add_argument('--dataset_folder_validation', default="cop3d_rgbd_test/our_data_format_4_validation_rgbd", help="Validation data path")
+    parser.add_argument('--dataset_folder_validation', default="data/pet_test_set/our_data_format_4_validation_rgbd", help="Validation data path")
     
     # Architechture hyper parameters
     parser.add_argument('--conv_kernel_size', type=int, default=15)
