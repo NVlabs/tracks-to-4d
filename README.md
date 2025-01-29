@@ -1,4 +1,4 @@
-# tracks_to_4d
+# TracksTo4D
 
 This repository contains code, pre-trained models, and test data for TracksTo4D (NeurIPS2024). 
 
