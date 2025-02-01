@@ -1,3 +1,5 @@
+# Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
 from inference import TracksTo4DNet,CustomDataset,get_losses
 import argparse
 import torch

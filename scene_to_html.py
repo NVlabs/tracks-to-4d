@@ -1,3 +1,5 @@
+# Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
 import torch
 import imageio
 import numpy as np

@@ -1,3 +1,5 @@
+# Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
 import torch
 import torch.nn as nn
 import matplotlib as mpl
