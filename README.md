@@ -32,7 +32,7 @@ cd ..
 To perform inference on the provided pet test set and generate depth and camera metrics along with HTML visualizations, run:
 
 ```bash
-python inference.py --dataset_folder_validation cop3d_rgbd_test/our_data_format_4_validation_rgbd \
+python inference.py --dataset_folder_validation data/pet_test_set/our_data_format_4_validation_rgbd \
                     --input_checkpoint_file pretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.pt \
                     --input_config_file pretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.json
 ```
@@ -44,7 +44,7 @@ Results are saved in the `runs/` directory.
 To enable test-time fine-tuning using our unsupervised losses, run:
 
 ```bash
-python inference.py --dataset_folder_validation cop3d_rgbd_test/our_data_format_4_validation_rgbd \
+python inference.py --dataset_folder_validation data/pet_test_set/our_data_format_4_validation_rgbd \
                     --input_checkpoint_file pretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.pt \
                     --input_config_file prepretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.json \
                     --finetunning_iterations 500
@@ -57,8 +57,8 @@ You can adjust the number of fine-tuning iterations as needed.
 To train a model using your dataset:
 
 ```bash
-python train.py --dataset_folder cop3d_rgbd_test/our_data_format_4_validation_rgbd \
-                --dataset_folder_validation cop3d_rgbd_test/our_data_format_4_validation_rgbd
+python train.py --dataset_folder data/pet_test_set/our_data_format_4_validation_rgbd \
+                --dataset_folder_validation data/pet_test_set/our_data_format_4_validation_rgbd
 ```
 
 This example uses test data for demonstration; replace it with your training and validation data.
@@ -66,8 +66,8 @@ This example uses test data for demonstration; replace it with your training and
 To continue training from our pre-trained checkpoint, run:
 
 ```bash
-python train.py --dataset_folder cop3d_rgbd_test/our_data_format_4_validation_rgbd \
-                --dataset_folder_validation cop3d_rgbd_test/our_data_format_4_validation_rgbd \
+python train.py --dataset_folder data/pet_test_set/our_data_format_4_validation_rgbd \
+                --dataset_folder_validation data/pet_test_set/our_data_format_4_validation_rgbd \
                 --continue_trainining 1 \
                 --continue_trainining_checkpoint pretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.pt
 ```
