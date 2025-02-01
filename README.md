@@ -5,7 +5,7 @@ This repository contains code, pre-trained models, and test data for TracksTo4D 
 - The **code and test data** are released under the **NSCLv1 license** (NVIDIA OneWay Noncommercial License\_22Mar2022.docx).
 - The **pre-trained models** are released under the **Creative Commons Attribution-NonCommercial 4.0 International License** ([Legal Code](https://creativecommons.org/licenses/by-nc/4.0/legalcode)).
 
-This project downloads and installs additional third-party open-source software. Please review their license terms before use.
+This project will download and install additional third-party open source software projects. Review the license terms of these open source projects before use.
 
 ## Installation
 
