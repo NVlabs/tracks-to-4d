@@ -514,8 +514,8 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--dataset_folder_validation', default="data/pet_test_set/our_data_format_4_validation_rgbd", help="Evaluation folder")
-    parser.add_argument('--input_checkpoint_file', default="pretrained_checkpoints/pets_checkpoint.pt", help="Checkpoint file")
-    parser.add_argument('--input_config_file', default="pretrained_checkpoints/conf.json", help="Checkpoint config file")
+    parser.add_argument('--input_checkpoint_file', default="pretrained_checkpoints/TracksTo4D_pretrained_dogs.pt", help="Checkpoint file")
+    parser.add_argument('--input_config_file', default="pretrained_checkpoints/TracksTo4D_pretrained_dogs.json", help="Checkpoint config file")
     
     parser.add_argument('--output_results_file', default="temp.json", help="Quantitative results output file")
     parser.add_argument('--finetunning_iterations', type=int, default=0, help="Number of testtime finetuning iteratioms. If 0 is given, no finetunning is applied.")

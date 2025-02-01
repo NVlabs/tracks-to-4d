@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--max_cameras', type=int, default=50, help="Maximum number of frames")
     
 
-    parser.add_argument('--continue_trainining_checkpoint', default="pretrained_checkpoints/pets_checkpoint.pt ", help="Path of the checkpoint to continue training from. (Used if continue_trainining>0)")
+    parser.add_argument('--continue_trainining_checkpoint', default="pretrained_checkpoints/TracksTo4D_pretrained_cats.pt", help="Path of the checkpoint to continue training from. (Used if continue_trainining>0)")
     parser.add_argument('--continue_trainining', type=int, default=0, help="if >0, continue training from a checkpoint")
     
     
