@@ -46,7 +46,7 @@ To enable test-time fine-tuning using our unsupervised losses, run:
 ```bash
 python inference.py --dataset_folder_validation data/pet_test_set/our_data_format_4_validation_rgbd \
                     --input_checkpoint_file pretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.pt \
-                    --input_config_file prepretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.json \
+                    --input_config_file pretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.json \
                     --finetunning_iterations 500
 ```
 
