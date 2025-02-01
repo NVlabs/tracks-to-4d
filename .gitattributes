@@ -1,2 +1,2 @@
-pretrained_checkpoints/pets_checkpoint.pt filter=lfs diff=lfs merge=lfs -text
 data/pet_test_set.zip filter=lfs diff=lfs merge=lfs -text
+pretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.pt filter=lfs diff=lfs merge=lfs -text
