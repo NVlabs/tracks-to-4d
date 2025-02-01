@@ -19,6 +19,13 @@ pip install matplotlib einops imageio opencv-python
 ```
 
 ## Getting Started
+Unzip the test folder:
+```bash
+cd data
+unzip pet_test_set.zip
+cd ..
+```
+
 
 ### Running Inference
 
