@@ -1,0 +1,18 @@
+{
+    "sparsity_dynamic_coeff": 0.001,
+    "reprojection_dynamic_coeff": 50.0,
+    "dataset_folder": "cop3d/our_data_format_4",
+    "dataset_folder_validation": "cop3d/our_data_format_4_validation",
+    "network_depth": 3,
+    "conv_kernel_size": 15,
+    "network_width1": 256,
+    "use_visible_input": 1,
+    "positional_dim": 12,
+    "K_basis": 12,
+    "max_cameras": 50,
+    "continue_trainining_checkpoint": "",
+    "continue_trainining": 0,
+    "weight_dynamic_reprojections": 0,
+    "trim_high_loss": 0,
+    "logs_folder": ""    
+}
