@@ -3,11 +3,11 @@
 This repository contains code, pre-trained models, and test data for TracksTo4D (NeurIPS 2024).
 
 - The **code and test data** are released under the **NSCLv1 license** (NVIDIA OneWay Noncommercial License\_22Mar2022.docx).
-- The **pre-trained models** are released under the **Creative Commons Attribution-NonCommercial 4.0 International License** ([Legal Code](https://creativecommons.org/licenses/by-nc/4.0/legalcode)).
+- The **pre-trained models** are released under Legal Code - Attribution-NonCommercial 4.0 International - Creative Commons (https://creativecommons.org/licenses/by-nc/4.0/legalcode).
 
 This project will download and install additional third-party open source software projects. Review the license terms of these open source projects before use.
 
-## Installation
+## Installing environment
 
 To set up the environment, run:
 
@@ -34,12 +34,13 @@ Results are saved in the `runs/` directory.
 
 ### Test-Time Fine-Tuning
 
-To enable test-time fine-tuning using unsupervised losses, run:
+To enable test-time fine-tuning using our unsupervised losses, run:
 
 ```bash
 python inference.py --dataset_folder_validation cop3d_rgbd_test/our_data_format_4_validation_rgbd \
                     --input_checkpoint_file pretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.pt \
-                    --input_config_file prepretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.json                    --finetunning_iterations 500
+                    --input_config_file prepretrained_checkpoints/TracksTo4D_pretrained_cats_dogs.json \
+                    --finetunning_iterations 500
 ```
 
 You can adjust the number of fine-tuning iterations as needed.
@@ -84,7 +85,7 @@ dataset_folder
  │   │   │   ├── 001.jpg
  │   │   │   ├── ...
 ```
-
+where any number of videos can be provided. 
 ### Preprocessing
 
 Before running preprocessing, download the CoTracker code and checkpoint under `thirdparty/` (see `thirdparty/readme.txt` for details).
@@ -106,7 +107,7 @@ If known, include internal calibration in `.npz` files using the field `Ks_all`,
 np.load("cop3d_rgbd_test/our_data_format_4_validation_rgbd/2024-03-03--16-50-13_260_st_1.npz")['Ks_all']
 ```
 
-If calibration is not provided, the network estimates it using `--predict_focal_length 1` in `inference.py` or `train.py`.
+If calibration is not provided, our code approximates the calibration, and the network can apply a correction if --predict_focal_length 1 (inference.py or train.py)
 
 For evaluation, you can also include:
 
