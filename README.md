@@ -1,6 +1,6 @@
 # TracksTo4D 
 
-This repository contains code, pre-trained models, and test data for TracksTo4D (NeurIPS 2024) [Project Page](https://tracks-to-4d.github.io/).
+This repository contains code, pre-trained models, and test data for [TracksTo4D](https://tracks-to-4d.github.io/ (NeurIPS 2024).
 
 - The **code and test data** are released under the **NSCLv1 license** (NVIDIA OneWay Noncommercial License\_22Mar2022.docx).
 - The **pre-trained models** are released under Legal Code - Attribution-NonCommercial 4.0 International - Creative Commons (https://creativecommons.org/licenses/by-nc/4.0/legalcode).
