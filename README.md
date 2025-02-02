@@ -117,7 +117,7 @@ np.load("cop3d_rgbd_test/our_data_format_4_validation_rgbd/2024-03-03--16-50-13_
 
 If calibration is not provided, our code approximates the calibration, and the network can apply a correction if --predict_focal_length 1 (inference.py or train.py)
 
-For evaluation, you can also include:
+For evaluation, you can also include (see examples in our pet_test_set):
 
 - `GT_mask_tracks_all`: Ground truth mask (1 for foreground objects).
 - `GT_depth_tracks_all`: Ground truth depth values.
